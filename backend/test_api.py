@@ -66,6 +66,30 @@ def test_endpoints():
     chat_res = res.json()
     print(f"-> EduBot responded: {chat_res['reply'][:60]}...")
 
+    print("Testing /api/ai/analyze-behavior...")
+    behavior_req = {
+        "student_id": students[1]["id"],
+        "context_type": "Teacher Observation",
+        "notes_text": "Student seemed exhausted and overwhelmed today. Skipped the collaborative group work and had head down on desk during math problem set."
+    }
+    res = client.post("/api/ai/analyze-behavior", json=behavior_req)
+    assert res.status_code == 200, res.text
+    b_res = res.json()
+    print(f"-> Behavioral Analysis: {b_res['sentiment_label']} | Urgency: {b_res['urgency_level']}")
+
+    print("Testing /api/ai/generate-report-comment...")
+    comment_req = {
+        "student_id": students[0]["id"],
+        "course_name": "AP Physics",
+        "grade_percentage": 94.5,
+        "effort_level": "Exemplary",
+        "strength_focus": "Newtonian mechanics and laboratory rigor"
+    }
+    res = client.post("/api/ai/generate-report-comment", json=comment_req)
+    assert res.status_code == 200, res.text
+    c_res = res.json()
+    print(f"-> Generated {len(c_res['comments'])} tailored comments. Tier: {c_res['performance_tier']}")
+
     print("All backend AI endpoints verified successfully!")
 
 if __name__ == "__main__":

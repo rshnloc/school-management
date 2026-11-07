@@ -239,6 +239,26 @@ export const api = {
     });
     if (!res.ok) throw new Error('EduBot service unavailable');
     return res.json();
+  },
+
+  analyzeStudentBehavior: async (data: { student_id: number; context_type: string; notes_text: string }) => {
+    const res = await fetch(`${API_BASE}/ai/analyze-behavior`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!res.ok) throw new Error('Failed to analyze behavioral observation');
+    return res.json();
+  },
+
+  generateReportComment: async (data: { student_id: number; course_name: string; grade_percentage: number; effort_level?: string; strength_focus?: string }) => {
+    const res = await fetch(`${API_BASE}/ai/generate-report-comment`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!res.ok) throw new Error('Failed to generate report card comments');
+    return res.json();
   }
 };
 

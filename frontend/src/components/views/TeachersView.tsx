@@ -147,7 +147,7 @@ export const TeachersView: React.FC = () => {
                     required
                     value={form.first_name}
                     onChange={(e) => setForm({ ...form, first_name: e.target.value })}
-                    placeholder="e.g. Dr. Arthur"
+                    placeholder="e.g. Teacher"
                     className="w-full border border-slate-200 rounded-xl px-3 py-2"
                   />
                 </div>
@@ -158,7 +158,7 @@ export const TeachersView: React.FC = () => {
                     required
                     value={form.last_name}
                     onChange={(e) => setForm({ ...form, last_name: e.target.value })}
-                    placeholder="e.g. Dent"
+                    placeholder="e.g. Test 1"
                     className="w-full border border-slate-200 rounded-xl px-3 py-2"
                   />
                 </div>
@@ -171,7 +171,7 @@ export const TeachersView: React.FC = () => {
                   required
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  placeholder="e.g. arthur.dent@example.com"
+                  placeholder="e.g. teacher.test1@example.com"
                   className="w-full border border-slate-200 rounded-xl px-3 py-2"
                 />
               </div>

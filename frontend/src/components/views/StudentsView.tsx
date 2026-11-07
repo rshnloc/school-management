@@ -432,7 +432,7 @@ export const StudentsView: React.FC<StudentsViewProps> = ({ initialReportStudent
                     required
                     value={formData.first_name}
                     onChange={(e) => setFormData({ ...formData, first_name: e.target.value })}
-                    placeholder="e.g. Taylor"
+                    placeholder="e.g. Student"
                     className="w-full text-xs border border-slate-200 rounded-xl px-3 py-2"
                   />
                 </div>
@@ -443,7 +443,7 @@ export const StudentsView: React.FC<StudentsViewProps> = ({ initialReportStudent
                     required
                     value={formData.last_name}
                     onChange={(e) => setFormData({ ...formData, last_name: e.target.value })}
-                    placeholder="e.g. Morgan"
+                    placeholder="e.g. Test 1"
                     className="w-full text-xs border border-slate-200 rounded-xl px-3 py-2"
                   />
                 </div>
@@ -456,7 +456,7 @@ export const StudentsView: React.FC<StudentsViewProps> = ({ initialReportStudent
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  placeholder="e.g. taylor.morgan@example.com"
+                  placeholder="e.g. student.test1@example.com"
                   className="w-full text-xs border border-slate-200 rounded-xl px-3 py-2"
                 />
               </div>

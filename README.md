@@ -152,8 +152,8 @@ school-management/
 
 - **Zero API Keys**: No proprietary keys or external cloud dependencies.
 - **Zero Real Personal Data**: Compliant with synthetic naming conventions:
-  - Fictional student names (`Jordan Carter`, `Casey Taylor`, `Avery Brooks`)
-  - Generic email addresses (`*.example@example.com`)
-  - Standard telephone test ranges (`+1-555-01XX`)
+  - Generic test identities (`Student Test 1`, `Student Test 2`, `Student Test 3`)
+  - Generic email addresses (`student.test1@example.com`, `teacher.test1@example.com`)
+  - Standard telephone test ranges (`+1-555-0101`, `+1-555-0102`)
   - Example addresses (`100 Example Way, Example City, EX 10001`)
 

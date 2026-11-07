@@ -188,3 +188,28 @@ export interface ChatMessage {
   timestamp: string;
   suggested_actions?: string[];
 }
+
+export interface BehaviorAnalysisResult {
+  student_name: string;
+  context_type: string;
+  sentiment_polarity: number;
+  sentiment_label: string;
+  urgency_level: 'High' | 'Medium' | 'Low';
+  urgency: string;
+  behavioral_flags: string[];
+  action_advice: string;
+  recommended_checkin_script: string;
+}
+
+export interface ReportCommentResult {
+  student_name: string;
+  subject: string;
+  grade_percentage: number;
+  performance_tier: string;
+  comments: Array<{
+    style: string;
+    text: string;
+    character_count: number;
+  }>;
+}
+
